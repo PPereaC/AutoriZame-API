@@ -1,0 +1,25 @@
+meta {
+  name: Actualizar Datos Cliente
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:8080/api/v1/clientes/1
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "nombre": "Pablo",
+    "email": "pereacampospabloo@gmail.com",
+    "contrasena": "Pablo12345@",
+    "direccionEthereum": "0x9999955"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

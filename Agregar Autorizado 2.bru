@@ -1,0 +1,25 @@
+meta {
+  name: Agregar Autorizado 2
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://localhost:8080/api/v1/clientes/1/autorizados
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "nombre": "Jose Manuel",
+    "dni": "56728173J",
+    "direccionEthereum": "0x123456789",
+    "telefono": "+34926738291"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

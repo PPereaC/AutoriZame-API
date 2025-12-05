@@ -1,0 +1,24 @@
+meta {
+  name: Añadir Empresa Repartidora
+  type: http
+  seq: 10
+}
+
+post {
+  url: http://localhost:8080/api/v1/empresas
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "nombre": "DHL",
+    "correo": "dhl@gmail.com",
+    "telefono": "926718243"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

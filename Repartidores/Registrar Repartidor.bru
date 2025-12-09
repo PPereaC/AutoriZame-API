@@ -1,0 +1,25 @@
+meta {
+  name: Registrar Repartidor
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/api/v1/empresas/1/repartidores
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "nombre": "Jesus",
+    "correo": "jesusgls@gmail.com",
+    "telefono": "937819384",
+    "estado": "Activo"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

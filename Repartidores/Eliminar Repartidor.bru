@@ -1,0 +1,16 @@
+meta {
+  name: Eliminar Repartidor
+  type: http
+  seq: 5
+}
+
+delete {
+  url: http://localhost:8080/api/v1/empresas/1/repartidores/1
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
